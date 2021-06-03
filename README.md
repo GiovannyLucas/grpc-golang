@@ -14,9 +14,9 @@ Studying gRPC protocol with Golang
 ```
 
 ### To install proto-buffer-generator
-| Linux | ```sh sudo apt install protobuf-compiler``` or ```sh snap install protobuf --classic``` |
+| Linux | ```sudo apt install protobuf-compiler``` or ```snap install protobuf --classic``` |
 |-------|-----------------------------------------------------------------------------------------|
-| MAC   | ```sh brew install protobuf #Mac, requer Homebrew instalado```                          |
+| MAC   | ```brew install protobuf #Mac, requer Homebrew instalado```                          |
 
 and to finish... run:
 ```sh 
