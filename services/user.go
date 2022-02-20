@@ -2,6 +2,9 @@ package services
 
 import (
 	"context"
+	"fmt"
+	"io"
+	"log"
 	"time"
 
 	"github.com/GiovannyLucas/grpc-golang/pb"
@@ -10,6 +13,7 @@ import (
 // type UserServiceServer interface {
 // 	AddUser(context.Context, *User) (*User, error)
 // 	AddUserVerbose(ctx context.Context, in *User, opts ...grpc.CallOption) (UserService_AddUserVerboseClient, error)
+//  AddUsers(ctx context.Context, opts ...grpc.CallOption) (UserService_AddUsersClient, error)
 // 	mustEmbedUnimplementedUserServiceServer()
 // }
 
@@ -67,4 +71,30 @@ func (*UserService) AddUserVerbose(payload *pb.User, stream pb.UserService_AddUs
 	})
 
 	return nil
+}
+
+func (*UserService) AddUsers(stream pb.UserService_AddUsersServer) error {
+	users := []*pb.User{}
+
+	for {
+		req, err := stream.Recv()
+
+		if err == io.EOF {
+			return stream.SendAndClose(&pb.Users{
+				User: users,
+			})
+		}
+
+		if err != nil {
+			log.Fatalf("Error while reveiving stream: %v", err)
+		}
+
+		users = append(users, &pb.User{
+			Id:    req.GetId(),
+			Name:  req.GetName(),
+			Email: req.GetEmail(),
+		})
+
+		fmt.Println("Adding", req.GetName())
+	}
 }
