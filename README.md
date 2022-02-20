@@ -2,7 +2,7 @@
 Studying gRPC protocol with Golang
 
 > **Note:**
-> To install gRPC in your PC and implement other functionalities in this (or other) code, you need to must be installed the library of protoc generator. To install, follow the instructions on topic [Install protoc generator][installation]
+> To install gRPC in your PC and implement other functionalities in this (or other) code, you need to have installed the library of protoc generator. To install, follow the instructions on topic [Install protoc generator][installation]
 
 ### To run :rocket:
 ```sh
@@ -14,6 +14,8 @@ Studying gRPC protocol with Golang
 ```
 
 ### To install proto-buffer-generator
+| OS | Command |
+|-------|-----------------------------------------------------------------------------------|
 | Linux | ```sudo apt install protobuf-compiler``` or ```snap install protobuf --classic``` |
 |-------|-----------------------------------------------------------------------------------|
 | MAC   | ```brew install protobuf # Mac, required Homebrew installed```                    |
