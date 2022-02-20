@@ -2,7 +2,7 @@
 Studying gRPC protocol with Golang
 
 > **Note:**
-> To install gRPC in your PC and implement other functionalities in this (or other) code, you need to have installed the library of protoc generator. To install, follow the instructions on topic [Install protoc generator][installation]
+> To install gRPC in your PC and implement other functionalities in this (or other) code, you should have installed the library of protoc generator. To install, follow the instructions on topic [Install protoc generator][installation]
 
 ### To run :rocket:
 ```sh
