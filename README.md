@@ -17,7 +17,6 @@ Studying gRPC protocol with Golang
 | OS | Command |
 |-------|-----------------------------------------------------------------------------------|
 | Linux | ```sudo apt install protobuf-compiler``` or ```snap install protobuf --classic``` |
-|-------|-----------------------------------------------------------------------------------|
 | MAC   | ```brew install protobuf # Mac, required Homebrew installed```                    |
 
 and to finish... run:
